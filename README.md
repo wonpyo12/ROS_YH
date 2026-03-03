@@ -27,4 +27,13 @@ catkin_make
 source devel/setup.bash
 echo $ROS_PACKAGE_PATH
 ```
+# rospack
+```bash
+rostopic echo /turtle1/pose
+x 값 :가로
+y 값 : 세로
+theta : 거북이 방향
+linear_velocity : 거북이가 움직이는 속도
+angular_velocity : 회전 속도
+```
 
