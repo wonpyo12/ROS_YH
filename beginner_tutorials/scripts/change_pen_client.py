@@ -6,11 +6,11 @@ from turtlesim.srv import SetPen
 
 def change_pen(r, g, b, width):
 
-    rospy.wait_for_service('/tutle1/set_pen')
+    rospy.wait_for_service('/turtle1/set_pen')
 
     try:
 
-        set_pen = rospy.ServiceProxy('/tutle1/set_pen', SetPen)
+        set_pen = rospy.ServiceProxy('/turtle1/set_pen', SetPen)
 
         set_pen(r, g, b, width, 0)
 
@@ -24,4 +24,4 @@ if __name__ == '__main__':
 
     rospy.init_node('change_pen_client')
 
-    change_pen(0, 255, 0, 5)    # 초록색, 두께 5
+    change_pen(255, 0, 255, 3)    # 초록색, 두께 5
