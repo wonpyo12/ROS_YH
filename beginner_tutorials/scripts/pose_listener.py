@@ -2,7 +2,7 @@
 
 import rospy
 
-from std_msgs.msg import Int32
+from turtlesim.msg import Pose
 
 def callback(msg):
 
@@ -12,7 +12,7 @@ def listener():
 
     rospy.init_node('pose_listener')
 
-    rospy.Subscriber('pose', Int32, callback)
+    rospy.Subscriber('/turtle1/pose', Pose, callback)
 
     rospy.spin()
 
