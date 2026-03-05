@@ -60,6 +60,7 @@ add_message_files(
 add_service_files(
   FILES
   AddTwoInts.srv
+  StringLength.srv
 #   Service1.srv
 #   Service2.srv
 
