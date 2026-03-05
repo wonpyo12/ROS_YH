@@ -160,6 +160,8 @@ include_directories(
    scripts/listener.py
    scripts/add_two_ints_server.
    scripts/add_two_ints_client.py
+   scripts/string_length_server.py
+   scripts/string_length_client.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 
