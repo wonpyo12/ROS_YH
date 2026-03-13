@@ -1,0 +1,12 @@
+scan_filter_chain:
+  # (이전에 작성한 바퀴 지우기 필터 내용이 있다면 그대로 두세요)
+
+  # 뚫린 문(Gap)을 가상의 벽으로 덮어씌우는 거리 필터
+  - name: gap_virtual_wall_filter
+    type: laser_filters/LaserScanRangeFilter
+    params:
+      lower_threshold: 0.1
+      upper_threshold: 1.2   # 레이저 거리가 1.2m 이상이면 문(Gap)으로 간주합니다.
+      use_message_range_limits: false
+      lower_replacement_value: 0.1
+      upper_replacement_value: 0.5  # 1.2m 이상 뚫려있을 때 0.5m 거리에 가상의 벽이 있는 것처럼 값을 조작합니다.

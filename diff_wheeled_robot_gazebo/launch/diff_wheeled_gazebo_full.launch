@@ -13,7 +13,7 @@
     <arg name="debug" value="$(arg debug)" />
     <arg name="gui" value="$(arg gui)" />
     <arg name="paused" value="$(arg paused)"/>
-    <arg name="world_name" value="$(find diff_wheeled_robot_gazebo)/worlds/corridor.world"/>
+    <arg name="world_name" value="$(find diff_wheeled_robot_gazebo)/world/test3.world"/>
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
     <arg name="headless" value="$(arg headless)"/>
   </include>
@@ -30,8 +30,8 @@
 
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
-  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-	args="-urdf -model diff_wheeled_robot -param robot_description"/> 
+ <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+	args="-urdf -model diff_wheeled_robot -param robot_description -x -3.0 -y 0.0 -z 0.1"/>
 
 
 
